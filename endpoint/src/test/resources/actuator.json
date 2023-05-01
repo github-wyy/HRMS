@@ -1,0 +1,80 @@
+{
+  "_links": {
+    "self": {
+      "href": "http://hr-endpoint:9090/actuator",
+      "templated": false
+    },
+    "beans": {
+      "href": "http://hr-endpoint:9090/actuator/beans",
+      "templated": false
+    },
+    "caches-cache": {
+      "href": "http://hr-endpoint:9090/actuator/caches/{cache}",
+      "templated": true
+    },
+    "caches": {
+      "href": "http://hr-endpoint:9090/actuator/caches",
+      "templated": false
+    },
+    "health": {
+      "href": "http://hr-endpoint:9090/actuator/health",
+      "templated": false
+    },
+    "health-path": {
+      "href": "http://hr-endpoint:9090/actuator/health/{*path}",
+      "templated": true
+    },
+    "info": {
+      "href": "http://hr-endpoint:9090/actuator/info",
+      "templated": false
+    },
+    "conditions": {
+      "href": "http://hr-endpoint:9090/actuator/conditions",
+      "templated": false
+    },
+    "configprops": {
+      "href": "http://hr-endpoint:9090/actuator/configprops",
+      "templated": false
+    },
+    "env": {
+      "href": "http://hr-endpoint:9090/actuator/env",
+      "templated": false
+    },
+    "env-toMatch": {
+      "href": "http://hr-endpoint:9090/actuator/env/{toMatch}",
+      "templated": true
+    },
+    "loggers": {
+      "href": "http://hr-endpoint:9090/actuator/loggers",
+      "templated": false
+    },
+    "loggers-name": {
+      "href": "http://hr-endpoint:9090/actuator/loggers/{name}",
+      "templated": true
+    },
+    "heapdump": {
+      "href": "http://hr-endpoint:9090/actuator/heapdump",
+      "templated": false
+    },
+    "threaddump": {
+      "href": "http://hr-endpoint:9090/actuator/threaddump",
+      "templated": false
+    },
+    "metrics-requiredMetricName": {
+      "href": "http://hr-endpoint:9090/actuator/metrics/{requiredMetricName}",
+      "templated": true
+    },
+    "metrics": {
+      "href": "http://hr-endpoint:9090/actuator/metrics",
+      "templated": false
+    },
+    "scheduledtasks": {
+      "href": "http://hr-endpoint:9090/actuator/scheduledtasks",
+      "templated": false
+    },
+    "mappings": {
+      "href": "http://hr-endpoint:9090/actuator/mappings",
+      "templated": false
+    }
+  }
+}

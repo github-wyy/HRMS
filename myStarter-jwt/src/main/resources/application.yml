@@ -1,0 +1,15 @@
+hr:
+  security:
+    config:
+      jwt:
+        sign: wyy
+        issuer: hrwyy
+        secret: jwt.secret
+        expire: 100000 # 单位：秒
+      password:
+        encrypt:
+          repeat: 5
+          salt: jwt.salt
+spring:
+  application:
+    name: JWT-HR

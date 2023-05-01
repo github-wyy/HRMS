@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyy.endpoint.dao.IDeptDAO">
+    <update id="doIncrementCurrent" parameterType="long">
+        UPDATE dept SET current=current+1 WHERE deptno=#{deptno}
+    </update>
+    <update id="doDecrementCurrent" parameterType="long">
+        UPDATE dept SET current=current-1 WHERE deptno=#{deptno}
+    </update>
+    <update id="doClearMgr" parameterType="long">
+        UPDATE dept SET empno=null, mname=null WHERE deptno=#{deptno}
+    </update>
+    <update id="doEditMgr" parameterType="map">
+        UPDATE dept SET empno=#{empno}, mname=#{mname} WHERE deptno=#{deptno}
+    </update>
+    <update id="doUpdateBase" parameterType="Dept">
+        UPDATE dept SET dname=#{dname},bound=#{bound} WHERE deptno=#{deptno}
+    </update>
+</mapper>

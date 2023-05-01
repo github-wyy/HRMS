@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.yootk'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+jar { enabled = true} // 允许打包为jar文件
+bootJar { enabled = false } // 不允许打包为Boot执行文件
+javadocJar { enabled = false } // 不需要打包为jar文件
+javadocTask { enabled = false } // 不需要打包为doc文件
+gradle.taskGraph.whenReady {            // 在所有的操作准备好后触发
+    tasks.each { task ->                // 找出所有的任务
+        if (task.name.contains('test')) {    // 如果发现有test任务
+            // 如果将enabled设置为true表示要执行测试任务，如果设置为false表示不执行测试任务
+            task.enabled = false
+        }
+    }
+}

@@ -1,0 +1,25 @@
+修改hosts主机配置文件  C:\Windows\System32\drivers\etc\hosts
+127.0.0.1           hr-endpoint
+127.0.0.1           hr-web
+192.168.14.134      rabbitmq_server
+
+docker运行rabbitmq
+docker pull rabbitmq:management
+docker run -d --name rabbitmq -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=1234 -p 15672:15672 -p 5672:5672 rabbitmq:management
+UI管理界面
+rabbitmq: rabbitmq_server:15672
+USER: admin
+PASS: 1234
+创建帐号并设置其角色为管理员
+username: hr
+password: 1234
+创建虚拟主机，并给hr用户配置该虚拟host的权限
+Virtual host: /hr
+
+项目打包：gradle bootJar
+打包运行：java -jar endpoint-1.0.0.jar
+
+UI界面
+rabbitmq: rabbitmq_server:15672
+Druid: hr-endpoint:80/druid  (username:wyy password:1234)
+actuator: hr-endpoint:9090/actuator

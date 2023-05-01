@@ -1,0 +1,91 @@
+ext.versions = [    // 定义所有要使用的版本号
+                    springboot                          : '2.4.3', // SpringBoot版本号
+                    junit                               : '5.7.1', // 配置JUnit测试工具的版本编号
+                    junitPlatformLauncher               : '1.7.1',  // JUnit测试工具运行平台版本编号
+                    lombok                              : '1.18.22', // Lombok插件对应的版本号
+                    fastjson                            : '1.2.75', // FastJSON组件对应的版本号
+                    jackson                             : '2.12.2', // 配置Jackson相关依赖库
+                    itextpdf                            : '5.5.13.2', // PDF文件生成的依赖库
+                    easypoi                             : '4.3.0', // 生成Excel处理的依赖库
+                    hibernateValidator                  : '6.2.0.Final', // JSR303验证库
+                    prometheus                          : '1.6.5', // Prometheus监控数据版本
+                    shedlock                            : '4.23.0', // ShedLock组件
+                    springDataRedis                     : '2.4.5', // SpringDataRedis版本
+                    commonsPool2                        : '2.9.0', // 连接池版本
+                    jaxwsRi                             : '2.3.3', // JDK-WS依赖
+                    cxf                                 : '3.4.3', // WEBService开发框架版本
+                    mysql                               : '8.0.25', // MySQL驱动的版本
+                    druid                               : '1.2.8', // Druid版本
+                    springJdbc                          : '5.3.7', // SpringJDBC版本
+                    mybatis                             : '3.5.7', // MyBatis的开发版本
+                    mybatisSpringBoot                   : '2.2.0', // Mybatis-SpringBoot整合依赖
+                    mybatisPlus                         : '3.4.3', // MyBatisPlus依赖版本
+                    springSecurityOAuth2                : '2.4.3', // OAuth2版本
+                    servlet                             : '4.0.1', // Servlet的依赖库
+                    commonsCodec                        : '1.15', // codec依赖库
+                    jjwt                                : '0.9.1', // JWT依赖库
+                    jaxb                                : '2.3.1', // JAXB依赖库
+                    jaxbBind                            : '2.3.0.1', // JAXB依赖库
+                    shiro                               : '1.7.1', // Shiro版本编号
+]
+ext.libraries = [   // 定义所有的依赖库
+                    // 以下的配置为SpringBoot项目所需要的核心依赖
+                    'spring-boot-gradle-plugin': "org.springframework.boot:spring-boot-gradle-plugin:${versions.springboot}",
+                    // 以下的配置为与项目用例测试有关的依赖
+                    'junit-jupiter-api': "org.junit.jupiter:junit-jupiter-api:${versions.junit}",
+                    'junit-vintage-engine': "org.junit.vintage:junit-vintage-engine:${versions.junit}",
+                    'junit-jupiter-engine': "org.junit.jupiter:junit-jupiter-engine:${versions.junit}",
+                    'junit-platform-launcher': "org.junit.platform:junit-platform-launcher:${versions.junitPlatformLauncher}",
+                    'junit-bom': "org.junit:junit-bom:${versions.junit}",
+                    // 以下的配置为Lombok组件有关的依赖
+                    'lombok': "org.projectlombok:lombok:${versions.lombok}",
+                    // 以下的配置为FastJSON组件有关的依赖
+                    //'fastjson': "com.alibaba:fastjson:${versions.fastjson}",
+                    // 以下的配置为Jackson将输出转换为XML有关的依赖
+                    //'jackson-dataformat-xml': "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${versions.jackson}",
+                    //'jackson-databind': "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}",
+                    //'jackson-annotations': "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}",
+                    // 以下的配置为ITextPDF输出的有关依赖配置
+                    //'itextpdf': "com.itextpdf:itextpdf:${versions.itextpdf}",
+                    // 以下的配置为生成Excel文件有关的依赖配置
+                    //'easypoi-spring-boot-starter': "cn.afterturn:easypoi-spring-boot-starter:${versions.easypoi}",
+                    // 以下的配置为HibernateValidator实现的JSR303验证标准依赖
+                    'hibernate-validator': "org.hibernate.validator:hibernate-validator:${versions.hibernateValidator}",
+                    // 以下的配置为Prometheus监控数据操作
+                    //'micrometer-registry-prometheus': "io.micrometer:micrometer-registry-prometheus:${versions.prometheus}",
+                    // 以下的配置为ShedLock分布式任务调度组件
+                    //'shedlock-spring': "net.javacrumbs.shedlock:shedlock-spring:${versions.shedlock}",
+                    //'shedlock-provider-redis-spring': "net.javacrumbs.shedlock:shedlock-provider-redis-spring:${versions.shedlock}",
+                    // 以下的配置为Redis缓存组件
+                    //'spring-boot-starter-data-redis': "org.springframework.boot:spring-boot-starter-data-redis:${versions.springDataRedis}",
+                    //'commons-pool2': "org.apache.commons:commons-pool2:${versions.commonsPool2}",
+                    // 以下的配置为WebService开发所需要的依赖：
+                    //'jaxws-ri': "com.sun.xml.ws:jaxws-ri:${versions.jaxwsRi}",
+                    //'cxf-spring-boot-starter-jaxws': "org.apache.cxf:cxf-spring-boot-starter-jaxws:${versions.cxf}",
+                    //'cxf-rt-transports-http': "org.apache.cxf:cxf-rt-transports-http:${versions.cxf}",
+                    // 以下的配置为数据库开发所需要的依赖：
+                    'mysql-connector-java': "mysql:mysql-connector-java:${versions.mysql}",
+                    'druid-spring-boot-starter': "com.alibaba:druid-spring-boot-starter:${versions.druid}",
+                    'spring-jdbc': "org.springframework:spring-jdbc:${versions.springJdbc}",
+                    'druid': "com.alibaba:druid:${versions.druid}",
+                    // 以下的配置为MyBatis开发框架所需要的依赖：
+                    'mybatis': "org.mybatis:mybatis:${versions.mybatis}",
+                    'mybatis-spring-boot-starter': "org.mybatis.spring.boot:mybatis-spring-boot-starter:${versions.mybatisSpringBoot}",
+                    // 以下的配置为MybatisPlus开发框架所需要的依赖：
+                    'mybatis-plus': "com.baomidou:mybatis-plus:${versions.mybatisPlus}",
+                    'mybatis-plus-boot-starter': "com.baomidou:mybatis-plus-boot-starter:${versions.mybatisPlus}",
+                    //'spring-security-oauth2-autoconfigure' : "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:${versions.springSecurityOAuth2}",
+                    // 以下的配置为JWT所需要的依赖库
+                    'jjwt': "io.jsonwebtoken:jjwt:${versions.jjwt}",
+                    'jaxb-api': "javax.xml.bind:jaxb-api:${versions.jaxb}",
+                    // 以下的配置为Shiro所需要的依赖库
+                    //'shiro-spring-boot-web-starter': "org.apache.shiro:shiro-spring-boot-web-starter:${versions.shiro}",
+                    // 以下的配置为JWT的服务整合
+                    'servlet-api': "javax.servlet:javax.servlet-api:${versions.servlet}",
+                    'commons-codec': "commons-codec:commons-codec:${versions.commonsCodec}",
+                    'jjwt': "io.jsonwebtoken:jjwt:${versions.jjwt}",
+                    'jaxb-api': "javax.xml.bind:jaxb-api:${versions.jaxb}",
+                    'jaxb-impl': "com.sun.xml.bind:jaxb-impl:${versions.jaxbBind}",
+                    'jaxb-core': "com.sun.xml.bind:jaxb-core:${versions.jaxbBind}",
+
+]

@@ -1,0 +1,6 @@
+rootProject.name = 'HRMS'
+include 'common'
+include 'endpoint'
+include 'util'
+include 'myStarter-jwt'
+

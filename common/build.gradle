@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+group 'com.yootk'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+jar { enabled = true} // 允许打包为jar文件
+bootJar { enabled = false } // 不允许打包为Boot执行文件
+javadocTask { enabled = false } // 不需要打包为doc文件
